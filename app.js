@@ -10,21 +10,24 @@ function updateValue(isIncressing,productID,mcprice){
     }
     productNumber.value = productText;
     // total section
-    /* totalBalance(productID); */
     totalCalculate();
+    
 
     // adding total balance 
     const mobilePriceId = document.getElementById(productID + '-price');
     mobilePriceId.innerText = productText * mcprice;
-
+    // clear
+    clearAll(productID)
+    
 }
  // clear function
 function clearAll(productId){
      let mouseStyleId = document.getElementById(productId+'-clear');
-     let mouseStyle = mouseStyleId.style.cursor = "pointer";
+     const mouseStyle = mouseStyleId.style.cursor = "pointer";
+    /*  let clearCall = document.getElementById(productId + '-number');
+     clearCall.value = 1; */
 } 
-clearAll('mobile');
-clearAll('case');
+
 // sub total calculate
 function inputValues(productID){
     const inputValues = document.getElementById(productID+'-number');
